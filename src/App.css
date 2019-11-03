@@ -1,0 +1,582 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+/* 
+///////////////////////////////
+PARTIE HEADER
+///////////////////////////////
+*/
+
+.headerTop {
+  background: #6441a4;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.listeMenu {
+  list-style-type: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.liensNav {
+  list-style-type: none;
+  padding: 0 20px;
+}
+.liensNav:nth-child(4) {
+  margin: 0 auto;
+  flex-shrink: 1;
+  width: 600px;
+}
+.lien {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.lien:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.logo {
+  margin-top: 5px;
+}
+.formSubmit {
+  display: flex;
+  flex-shrink: 1;
+}
+.logoLoupe {
+  width: 20px;
+}
+.inputRecherche {
+  width: 50%;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.liensNav button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 4px 20px;
+  border: none;
+}
+
+.menuResBtn {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.menuIco {
+  width: 25px;
+}
+@media screen and (max-width: 950px) {
+  .liensNav:nth-child(4) {
+    width: 550px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .listeMenu {
+    flex-direction: column;
+    height: 250px;
+    padding-top: 50px;
+  }
+  .liensNav {
+    height: 100px;
+    background: #6441a4;
+    width: 100%;
+  }
+  .liensNav:nth-child(4){
+    width: 100%!important;
+    padding: 10px 0 20px 0;
+  }
+  .formSubmit {
+    justify-content: center;
+  }
+  .menuResBtn {
+    display: block!important;
+    z-index: 1000;
+  }
+}
+
+
+/* 
+///////////////////////////////
+PARTIE SIDEBAR
+///////////////////////////////
+*/
+
+.sidebar {
+  position: fixed;
+  top: 50px;
+  width: 239px;
+  background: #19171c;
+  height: 100vh;
+}
+.titreSidebar {
+  padding: 30px 0 20px 0;
+  color: #efebf5;
+  font-size: 15px;
+  font-weight: 500;
+}
+.listeStream {
+  padding: 0 0 0 10px;
+  color: #efebf5;
+}
+
+.containerFlexSidebar {
+  padding: 10px 15px 8px 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+.containerFlexSidebar:hover {
+  background: rgba(255,255,255,0.2);
+}
+.profilePicRonde {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.streamUser {
+  color: #f1f1f1;
+  flex-basis: 50%;
+  overflow: hidden;
+  text-align: left;
+}
+.gameNameSidebar {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #aeabb6;
+  text-align: left;
+  margin-top: 5px;
+}
+.viewerRight {
+  color: #aeabb6;
+  flex-basis: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+.pointRouge {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-top: 6px;
+  margin-right: 3px;
+  background: crimson;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+}
+/* 
+///////////////////////////////
+PARTIE GAMES
+///////////////////////////////
+*/
+
+.titreGames {
+  padding-top: 90px;
+  font-size: 50px;
+  font-weight: 300;
+  padding-left: 260px;
+  padding-bottom: 50px;
+}
+.flexAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 260px;
+}
+.carteGames {
+  height: 480px;
+  width: 280px;
+  margin: 0 30px 30px 0;
+  position: relative;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+}
+.carteGames:hover {
+  transform: translateY(-5px);
+}
+.imgCarte {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.cardBodyGames {
+  height: 144px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.btnCarte {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #212529;
+  font-size: 14px;
+  line-height: 1.125;
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+.btnCarte:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.titreCartesGames {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width:80%;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+  .titreGames {
+    padding-left: 0px;
+  }
+  .flexAccueil {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .titreGames {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 559px) {
+
+  .carteGames {
+    margin: 0 0 30px 0;
+  }
+  .flexAccueil{
+    padding-left: 0px;
+  }
+
+}
+
+/* 
+///////////////////////////////
+PARTIE TOPSTREAMS
+///////////////////////////////
+*/
+
+.carteStream {
+  height: 420px;
+  width: 320px;
+  margin: 0 30px 30px 0;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+
+}
+
+.carteStream:hover {
+  transform: translateY(-5px);
+}
+
+.titreCartesStream {
+  font-size: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+  font-weight: 500;
+}
+.cardBodyStream {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.txtStream {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.viewers {
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 559px) {
+  .carteStream {
+    margin: 0 0 30px 0;
+  }
+}
+
+/* 
+///////////////////////////////
+PARTIE LIVE
+///////////////////////////////
+*/
+
+.containerDecale {
+  overflow-x: hidden;
+  padding-top: 50px;
+  padding-left: 239px;
+}
+.contInfo {
+  color: #19171c;
+  display: grid;
+  height: 156px;
+  width: calc(100% - 340px);
+  grid-template: repeat(3, 35px) / 1fr 1fr;
+  margin-top: 5px;
+}
+.titreStream {
+  grid-area: 1 / 1 / 2 / 3;
+  text-align: left;
+  margin-left: 5px;
+  font-weight: 400;
+  font-size: 20px;
+}
+.viewer {
+  grid-area: 1 / 2 / 2 / 3;
+  text-align: right;
+  color: crimson;
+  font-weight: 700;
+  margin: 3px 5px 0 0;
+}
+.infogame {
+  grid-area: 2 / 1 / 3 / 3;
+  text-align: left;
+  margin-left: 5px;
+  font-weight: 400;
+  font-size: 20px;
+}
+.nomJeu {
+  grid-area: 3 / 1 / 4 / 2;
+  text-align: left;
+  margin-left: 5px;
+  font-weight: 400;
+  font-size: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .containerDecale {
+    padding-left: 0;
+  }
+  .contInfo{
+    width: calc(100%);
+  }
+  .viewer {
+    margin: 5px 25px 0 0;
+  }
+
+}
+
+@media screen and (max-width: 630px) {
+
+  .contInfo {
+    grid-template: 45px 35px 35px 35px / 1fr 1fr;
+  }
+  .titreStream {
+    font-size: 14px;
+  }
+  .nomJeu {
+    font-size: 14px;
+  }
+  .infogame {
+    font-size: 14px;
+  }
+  .viewer {
+    font-size: 14px;
+    margin: 0 0 0 5px;
+    grid-area: 4 / 1 / 5 / 2;
+    text-align: left;
+
+  }
+
+}
+
+/* 
+///////////////////////////////
+PARTIE GAMESTREAMS
+///////////////////////////////
+*/
+
+.titreGamesStreams {
+  padding-top: 100px;
+  font-size: 53px;
+  font-weight: 300;
+  padding-left: 260px;
+  padding-bottom: 10px;
+}
+.sousTitreGameStreams {
+  font-size: 25px;
+  font-weight: 300;
+  padding-left: 260px;
+  padding-bottom: 50px;
+}
+
+.textColored {
+  color: #6441a4;
+}
+
+.carteGameStreams {
+  height: 380px;
+  width: 320px;
+  margin: 0 30px 30px 0;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+}
+.carteGameStreams:hover {
+  transform: translateY(-5px);
+}
+.cardBodyGameStreams {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media screen and (max-width:1200px) {
+  .titreGamesStreams {
+    padding-left: 0px;
+    font-size: 30px;
+  }
+  .sousTitreGameStreams {
+    font-size: 17px;
+    padding-left: 0px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width:559px) {
+  .carteGameStreams {
+    margin: 0 0 30px 0;
+  }
+}
+
+
+/* 
+//////////////////////////////////////////
+PARTIE RESULTATS
+////////////////////////////////
+*/
+
+.containerDecaleResultats {
+  overflow-x: hidden;
+  padding-top: 50px;
+  padding-left: 239px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+.containerDecaleResultats h4 {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+.carteResultats {
+  height: 580px;
+  width: 350px;
+  margin-bottom: 35px;
+  position: relative;
+  transition: all 0.4s;
+  /* Proprietes bootstrap */
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+  margin-top: 20px;
+}
+.cardBodyResults {
+  height: 230px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardBodyResults .btnCarte{
+  align-self: flex-end;
+}
+
+.txtResult {
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
+}
+.btnResult {
+  background: rgb(255, 191, 0);
+  color: #000;
+  font-size: 17px;
+}
+.btnResult:hover {
+  color: #000;
+}
+
+/* Custom */
+@media screen and (max-width:1200px) {
+  .containerDecaleResultats {
+  
+    overflow-x: hidden;
+    padding-top: 0px;
+    padding-left: 0px;
+
+  }
+  .containerDecaleResultats h4 {
+    padding-top: 100px;
+  }
+
+}
+@media screen and (max-width:600px) {
+  .containerDecaleResultats h4 {
+
+    padding-bottom: 20px;
+    font-size: 16px;
+  }
+  .carteResultats {
+    height: 580px;
+    width: 300px;
+
+  }
+}
+.spanTxt {
+  color: #000!important;
+}
+.titreResultats {
+ padding-top: 50px;
+}
+
+
